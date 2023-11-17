@@ -1,14 +1,14 @@
 #include "Info_Receiver.hpp"
-#include "tools.hpp"
-
-#include "tools.hpp"
 #include <iostream>
 #include <netinet/in.h>
 #include <unistd.h>
 #include <vector>
-#include "Info_Sender.hpp"
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include <zlib.h>
+#define RESET "\033[0m"
+#define RED "\033[31m"
+void printError(const std::string &);
 
 int main(int argc, char *argv[]) {
   //   std::cout << "Number of arguments: " << argc << std::endl;
@@ -69,4 +69,9 @@ int main(int argc, char *argv[]) {
   close(sock); // Close the socket when the loop is terminated
 
   return 0;
+}
+
+
+void printError(const std::string &error) {
+  std::cerr << RED << error << RESET << std::endl;
 }

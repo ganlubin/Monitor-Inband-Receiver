@@ -14,10 +14,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build)
 # 添加头文件搜索路径
 include_directories(${CMAKE_SOURCE_DIR})
 
-# 添加可执行文件main
-add_executable(main_executable
-    main.cpp
-)
 
 # 添加可执行文件Info_Receiver
 add_executable(receiver
@@ -27,4 +23,4 @@ add_executable(receiver
 
 target_link_libraries(receiver procps z)
 
-install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
+# install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
