@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 2.6.3)
 project(Monitor-Inband-Receiver)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -21,6 +21,6 @@ add_executable(receiver
 )
 
 
-target_link_libraries(receiver procps z)
+target_link_libraries(receiver ${procps} ${z})
 
 install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
