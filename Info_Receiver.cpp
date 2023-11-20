@@ -62,6 +62,8 @@ int main(int argc, char *argv[]) {
     std::size_t sizeInBytes = json_str.size();
     std::cout << "Depressed data length: " << sizeInBytes << std::endl;
 
+    std::cout << json_str << std::endl;
+
     // Process the received data here
 
   }
