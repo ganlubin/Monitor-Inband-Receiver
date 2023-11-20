@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6.3)
+cmake_minimum_required(VERSION 3.0)
 project(Monitor-Inband-Receiver)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -9,7 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
 # 设置编译输出目录
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build)
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build)
 
 # 添加头文件搜索路径
 include_directories(${CMAKE_SOURCE_DIR})
