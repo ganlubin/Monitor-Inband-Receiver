@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
   }
 
   if (bind(sock, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) == -1) {
-    printError("Bind failed");
+    printError("Bind failed with error code: " + std::to_string(errno));
     close(sock);
     return 1;
   }

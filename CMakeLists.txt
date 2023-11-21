@@ -23,4 +23,4 @@ add_executable(receiver
 
 target_link_libraries(receiver procps z)
 
-install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
+# install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
