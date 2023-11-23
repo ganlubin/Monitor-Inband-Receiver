@@ -14,13 +14,21 @@ int main(int argc, char *argv[]) {
   //   std::cout << "Number of arguments: " << argc << std::endl;
 
   std::string hostname = argv[1];
-  int port_int = std::atoi(argv[2]);
-  unsigned int port = static_cast<uint16_t>(port_int);
+
+  uint16_t port = std::stoi(argv[2]);
 
   struct sockaddr_in serverAddr;
   serverAddr.sin_family = AF_INET;
   serverAddr.sin_port = htons(port);
   serverAddr.sin_addr.s_addr = INADDR_ANY;
+
+  // if (inet_pton(AF_INET, hostname.c_str(), &serverAddr.sin_addr) <= 0) {
+  //     printError("Invalid IP address");
+  //     return 1;
+  // }
+
+
+
   std::cout << "change" << std::endl;
   int sock = socket(AF_INET, SOCK_DGRAM, 0);
   if (sock == -1) {
