@@ -20,8 +20,8 @@ int main(int argc, char *argv[]) {
   struct sockaddr_in serverAddr;
   serverAddr.sin_family = AF_INET;
   serverAddr.sin_port = htons(port);
-  serverAddr.sin_addr.s_addr = inet_addr(hostname.c_str());
-
+  serverAddr.sin_addr.s_addr = INADDR_ANY;
+  std::cout << "change" << std::endl;
   int sock = socket(AF_INET, SOCK_DGRAM, 0);
   if (sock == -1) {
     printError("Failed to create socket");
